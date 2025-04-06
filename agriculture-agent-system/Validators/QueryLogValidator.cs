@@ -7,17 +7,15 @@ namespace AgricultureAgentSystem.Validators
     {
         public QueryLogValidator()
         {
-            RuleFor(x => x.UserId)
-                .GreaterThan(0).WithMessage("User ID must be greater than 0");
-
             RuleFor(x => x.QueryType)
-                .NotEmpty().WithMessage("Query type is required");
+                .NotEmpty().WithMessage("Query type is required")
+                .MaximumLength(100).WithMessage("Query type cannot exceed 100 characters");
 
             RuleFor(x => x.Parameters)
-                .NotEmpty().WithMessage("Parameters are required");
+                .MaximumLength(500).WithMessage("Parameters cannot exceed 500 characters");
 
             RuleFor(x => x.Response)
-                .NotEmpty().WithMessage("Response is required");
+                .MaximumLength(1000).WithMessage("Response cannot exceed 1000 characters");
         }
     }
 }
