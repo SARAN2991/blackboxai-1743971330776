@@ -1,0 +1,39 @@
+<nav class="bg-green-700 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <span class="text-xl font-bold">AgriHub</span>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a routerLink="/dashboard" 
+               class="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-600">
+              Dashboard
+            </a>
+            <a routerLink="/crop-recommendation" 
+               class="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-600">
+              Crop Recommendation
+            </a>
+            <a routerLink="/market-prices" 
+               class="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-600">
+              Market Prices
+            </a>
+            <a routerLink="/weather" 
+               class="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-600">
+              Weather
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-4 flex items-center md:ml-6">
+          <button (click)="logout()"
+            class="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-600">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
